@@ -1,118 +1,191 @@
-/* Full-screen background */
+/* ---------- GLOBAL LAYOUT ---------- */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Arial', sans-serif;
-    background: url("https://images.unsplash.com/photo-1619457160220-f8a1f0e0260e?auto=format&fit=crop&w=1950&q=80") no-repeat center center fixed;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0a0a0a, #1b1b1b);
+    background-image: url("https://images.unsplash.com/photo-1619457160220-f8a1f0e0260e?auto=format&fit=crop&w=1950&q=80");
     background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
 }
 
-/* Navigation bar */
+/* ---------- NAV BAR ---------- */
 nav {
-    padding: 15px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.75);
     text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 nav a {
     text-decoration: none;
-    padding: 8px 20px;
-    margin: 0 10px;
-    background-color: #ff3c3c;
-    color: white;
-    border-radius: 5px;
+    color: #fff;
+    background: linear-gradient(90deg, #ff3c3c, #ff5f00);
+    padding: 10px 20px;
+    border-radius: 8px;
     font-weight: bold;
+    margin: 0 8px;
+    letter-spacing: 0.5px;
     transition: 0.3s;
 }
 
 nav a:hover {
-    background-color: #ff0000;
+    background: linear-gradient(90deg, #ff7b00, #ff0000);
+    transform: scale(1.05);
 }
 
-/* Hero section */
+/* ---------- HERO + CONTAINER ---------- */
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 60px); /* full height minus nav */
+    height: calc(100vh - 80px);
 }
 
 .content {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 30px;
-    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 20px;
     text-align: center;
-    color: white;
-    min-width: 400px;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(255, 0, 100, 0.3);
+    width: 80%;
+    max-width: 800px;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Table */
+.content:hover {
+    box-shadow: 0 0 30px rgba(255, 0, 150, 0.5);
+}
+
+/* ---------- TABLE ---------- */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    color: white;
+    color: #fff;
 }
 
 th, td {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
+    padding: 14px 12px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+th {
+    background: rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffcc00;
 }
 
 tr:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.08);
 }
 
-/* Buttons */
+/* ---------- GAME IMAGE ---------- */
+.game-image {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background: linear-gradient(90deg, #ff00c8, #00c3ff);
+    padding: 2px;
+    transition: 0.3s ease-in-out;
+}
+
+.game-image:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(0, 195, 255, 0.5);
+}
+
+/* ---------- BUTTONS ---------- */
 .btn {
-    padding: 5px 12px;
-    border-radius: 5px;
-    color: white;
+    padding: 7px 16px;
+    border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
+    letter-spacing: 0.3px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    border: none;
 }
 
 .edit {
-    background-color: #00bfff;
+    background: linear-gradient(90deg, #007bff, #00bfff);
+    box-shadow: 0 0 8px rgba(0, 191, 255, 0.4);
 }
 
 .edit:hover {
-    background-color: #009acd;
+    background: linear-gradient(90deg, #00bfff, #0095ff);
+    transform: scale(1.05);
 }
 
 .delete {
-    background-color: #ff4500;
+    background: linear-gradient(90deg, #ff4500, #ff0000);
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.4);
 }
 
 .delete:hover {
-    background-color: #ff0000;
+    background: linear-gradient(90deg, #ff5f00, #ff2a00);
+    transform: scale(1.05);
 }
 
-/* Add/Edit form */
+/* ---------- FORM INPUTS ---------- */
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+    margin-top: 15px;
 }
 
-input[type="text"] {
-    padding: 10px;
-    border-radius: 5px;
+input[type="text"], textarea {
+    padding: 12px;
+    border-radius: 8px;
     border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1rem;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
 }
 
 button {
-    padding: 10px;
+    padding: 12px;
+    border-radius: 8px;
     border: none;
-    border-radius: 5px;
-    background-color: #32cd32;
-    color: white;
+    background: linear-gradient(90deg, #00ff99, #00cc66);
+    color: #000;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #28a428;
+    background: linear-gradient(90deg, #00cc66, #00994d);
+    transform: scale(1.05);
 }
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    .content {
+        width: 95%;
+        padding: 25px;
+    }
+    table, th, td {
+        font-size: 0.9rem;
+    }
+    .game-image {
+        width: 70px;
+        height: 70px;
+    }
+}
+
