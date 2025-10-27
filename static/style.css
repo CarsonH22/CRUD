@@ -1,0 +1,118 @@
+/* Full-screen background */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background: url("https://images.unsplash.com/photo-1619457160220-f8a1f0e0260e?auto=format&fit=crop&w=1950&q=80") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Navigation bar */
+nav {
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 8px 20px;
+    margin: 0 10px;
+    background-color: #ff3c3c;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #ff0000;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px); /* full height minus nav */
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    min-width: 400px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Buttons */
+.btn {
+    padding: 5px 12px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.edit {
+    background-color: #00bfff;
+}
+
+.edit:hover {
+    background-color: #009acd;
+}
+
+.delete {
+    background-color: #ff4500;
+}
+
+.delete:hover {
+    background-color: #ff0000;
+}
+
+/* Add/Edit form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #32cd32;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #28a428;
+}
